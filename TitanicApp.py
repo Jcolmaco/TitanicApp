@@ -10,8 +10,8 @@ with open('scaler.pkl', 'rb') as scaler_file:
     scaler = pickle.load(scaler_file)
 
 # Streamlit UI
-st.title("🚢 Titanic Survival Predictor")
-st.write("Enter passenger details to predict survival.")
+st.title("🚢 Will You Survive the Titanic? 🚢")
+st.write("Step aboard and enter passenger details to uncover your fate on the legendary voyage!")
 
 # User inputs
 pclass = st.selectbox("Passenger Class", [1, 2, 3])
@@ -31,5 +31,5 @@ if st.button("Predict Survival"):
     input_scaled = scaler.transform(input_data)
     prediction = model.predict(input_scaled)
     
-    result = "Survived 🎉" if prediction[0] == 1 else "Did not survive 😢"
+    result = "Congratulations! You survived the Titanic disaster! 🎉" if prediction[0] == 1 else "Unfortunately, you did not survive the voyage. Stay safe in your next adventure! 😢"
     st.success(f'Prediction: **{result}**')
