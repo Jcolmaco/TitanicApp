@@ -10,7 +10,7 @@ with open('scaler.pkl', 'rb') as scaler_file:
     scaler = pickle.load(scaler_file)
 
 # Streamlit UI
-st.title("🚢 Will You Survive the Titanic? 🚢")
+st.title(" Will You Survive the Titanic? 🚢")
 st.write("Step aboard and enter passenger details to uncover your fate on the legendary voyage!")
 
 # User inputs
