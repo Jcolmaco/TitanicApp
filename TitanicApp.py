@@ -3,13 +3,10 @@ import numpy as np
 import pickle
 
 # Load model and scaler
-model_path = "/content/titanic_model.pkl"
-scaler_path = "/content/scaler.pkl"
-
-with open(model_path, 'rb') as model_file:
+with open('titanic_model.pkl', 'rb') as model_file:
     model = pickle.load(model_file)
 
-with open(scaler_path, 'rb') as scaler_file:
+with open('scaler.pkl', 'rb') as scaler_file:
     scaler = pickle.load(scaler_file)
 
 # Streamlit UI
